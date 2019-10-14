@@ -121,8 +121,9 @@ function drawBuckets(context, startX, startY, bucket) {
     }
 
     if (i == key && bucket[i].length > 0) {
-      // let bucket_name = 'balde_' + i
-      // let bucket_node = document.getElementById(bucket_name)
+      let bucket_name = 'balde_' + i
+      let bucket_node = document.getElementById(bucket_name).lastChild
+      bucket_node.classList.add('text-light')
       context.fillStyle = '#EB0D1B'
       context.fillText(
         bucket[i][bucket[i].length - 1],
